@@ -69,6 +69,47 @@ html body {
 	display:block;
 }
 
+.skill {
+	width: 50%;
+	float: left;
+}
+.skill-value {
+	width:30%;
+	height:18px;
+	float:left;
+}
+.skill-value .sk {
+	background-color:#00F;
+	border:1px solid #FFF;
+	height:18px;
+	width:18px;
+	float:left;
+}
+
+.table-skills {
+	width: 100%;
+}
+.table-skills td {
+	width:50%;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.icon {
+	background-color:#03a9fa;
+	height:40px;
+	width:40px;
+	border-radius: 20px;
+	font-size:20px;
+	padding-top:10px;
+	text-align: center;
+	color:#FFF;
+}
+
+.contact-content {
+	padding:9px;
+}
+
 .footer {
 	margin-top:70px;
 	background-color: #03a9fa;
