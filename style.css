@@ -14,7 +14,7 @@ html body {
 }
 
 .header-abstract {
-	height:100%;
+	height:240px;
 	position:block;
 }
 
@@ -25,18 +25,57 @@ html body {
 	background-color:#01579B;
 	height:70px;
 	text-align:right;
-	padding: 22px;
+	padding: 18px;
 }
-.navigation ul li a{
-	margin-left:10px;
-	color: #FFF;
-	text-decoration: none;
-	font-size:18px;
+@media screen and (min-width: 768px){
+	.menu-icon {
+		display: none;
+	}
+	.navigation div ul li a{
+		margin-left:10px;
+		color: #FFF;
+		text-decoration: none;
+		font-size:22px;
+	}
+	.navigation div ul li a:hover{
+		color: #FFF;
+		text-shadow:0px 0px 1px #fff;
+		text-decoration: none;
+	}	
 }
-.navigation ul li a:hover{
-	color: #FFF;
-	text-shadow:0px 0px 1px #fff;
-	text-decoration: none;
+
+/*mobile*/
+@media screen and (max-width: 768px){
+	.menu-icon {
+		z-index:3;
+		display: block;
+		font-size:30px;
+		position: fixed;
+		top: 20px;
+		left:20px;
+		color: #FFFFFF;
+	}
+	.menu-items {
+		display:none;
+		top: 70px; left: 0;
+		background-color:#00F;
+		position: absolute; width:100%;
+	}
+	.menu-items ul {
+		display: table-caption;
+		text-align: left;
+	}
+	.menu-items ul li a{
+		margin-left:10px;
+		color: #FFF;
+		text-decoration: none;
+		font-size:22px;
+	}
+	.menu-items ul li a:hover{
+		color: #FFF;
+		text-shadow:0px 0px 1px #fff;
+		text-decoration: none;
+	}	
 }
 
 .card {
@@ -70,29 +109,11 @@ html body {
 }
 
 .skill {
-	width: 50%;
-	float: left;
-}
-.skill-value {
-	width:30%;
-	height:18px;
+	width: 18px;
+	height: 18px;
+	background-color:#009;
 	float:left;
-}
-.skill-value .sk {
-	background-color:#00F;
 	border:1px solid #FFF;
-	height:18px;
-	width:18px;
-	float:left;
-}
-
-.table-skills {
-	width: 100%;
-}
-.table-skills td {
-	width:50%;
-	padding-top:15px;
-	padding-bottom:15px;
 }
 
 .icon {
@@ -115,4 +136,8 @@ html body {
 	background-color: #03a9fa;
 	width:100%;
 	height:160px;
+	color:#FFFFFF;
+	text-align: center;
+	padding:65px;
+	font-size: 24px;
 }

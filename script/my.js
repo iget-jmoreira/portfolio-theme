@@ -1,7 +1,16 @@
 $(function() {
     $('a').bind('click',function(event){
         var $anchor = $(this);
-        console.log($($anchor.attr('href')).offset().top);
       	$('html, body').stop().animate({scrollTop: $($anchor.attr('href')).offset().top - 90}, 1000,'swing');
     });
+});
+
+$("#show_menu").click(function(){
+	$(".menu-items").slideToggle(400);
+});
+
+$(".menu-items ul li").click(function(){
+	if($(window).width() <= 768){	
+		$(".menu-items").slideToggle(400);
+	}
 });

@@ -6,14 +6,7 @@
 			<?php the_field('title_about'); ?>
 		</div>
 		<div class="card-body">
-			<div class="row">
-				<div class="col-lg-3">
-					<img src="<?php the_field('image_about'); ?>">
-				</div>
-				<div class="col-lg-9">
-					<?php the_field('content_about'); ?>
-				</div>
-			</div>
+			<?php the_field('content_about'); ?>
 		</div>
 	</div>
 
@@ -22,70 +15,24 @@
 			<?php the_field('title_skills'); ?>
 		</div>
 		<div class="card-body text-content">
-			<table class="table-skills">
-				<tbody>
-					<tr>
-						<td><div class="skill">PHP</div><div class="skill-value">
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-						</div></td>
-						<td><div class="skill">JavaScript</div><div class="skill-value">
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-						</div></td>
-					</tr>
-					<tr>
-						<td><div class="skill">JQuery</div><div class="skill-value">
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-						</div></td>
-						<td><div class="skill">AngularJs</div><div class="skill-value">
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-						</div></td>
-					</tr>
-					<tr>
-						<td><div class="skill">AJAX</div><div class="skill-value">
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-						</div></td>
-						<td><div class="skill">Magento</div><div class="skill-value">
-							<div class="sk"></div>
-							<div class="sk"></div>
-							<div class="sk"></div>
-						</div></td>
-					</tr>
-					<tr>
-						<td><div class="skill">PHP</div><div class="skill-value">
-							<div class="sk"></div>
-							<div class="sk"></div>
-						</div></td>
-						<td><div class="skill">JavaScript</div><div class="skill-value">
-							<div class="sk"></div>
-							<div class="sk"></div>
-						</div></td>
-					</tr>
-					<tr>
-						<td><div class="skill">PHP</div><div class="skill-value">
-							<div class="sk"></div>
-						</div></td>
-						<td><div class="skill">JavaScript</div><div class="skill-value">
-							<div class="sk"></div>
-						</div></td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="row">
+				<?php if(have_rows('skill_content')): ?>
+					<?php while(have_rows('skill_content')): the_row(); ?>
+						<div class="col-lg-6">
+							<div class="row">
+								<div class="col-lg-8 col-xs-7">
+									<?php the_sub_field('skill_name'); ?>
+								</div>
+								<div class="col-lg-4 col-xs-5">
+									<?php the_sub_field('skill_power'); ?>
+								</div>
+							</div>
+						</div>
+					<?php endwhile; ?>
+				<?php else: ?>
+					tchau
+				<?php endif; ?>
+			</div>
 		</div>
 	</div>
 

@@ -10,11 +10,16 @@
 	$args = array(
 	        'theme_location'  => 'main-menu',
 	        'container'       => 'div',
-	        'container_class' => 'navigation',
+	        'container_class' => 'menu-items',
 	        'items_wrap'      => '<ul class="list-inline">%3$s</ul>',
 	);
 ?>
 
+
+<div class="navigation">
 <?php wp_nav_menu($args); ?>
+</div>
+
 
 <div class="header-abstract"></div>
+<div class="menu-icon" id="show_menu"><i class="fa fa-navicon"></i></div>
