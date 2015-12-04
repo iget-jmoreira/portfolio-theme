@@ -1,5 +1,2 @@
-<div class="footer">
-&copy; <?php the_field('footer_copy'); ?>&emsp;|&emsp;Created By: <?php the_field('footer_author'); ?>
-</div>
-
+<!-- Inclui os scripts do footer -->
 <?php wp_footer(); ?>
