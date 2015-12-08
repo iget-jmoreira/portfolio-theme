@@ -21,4 +21,4 @@
 </div>
 
 <div class="menu-icon" id="show_menu"><i class="fa fa-navicon"></i></div>
-<div class="login-icon"><a href="wp-login"><i class="fa fa-wordpress"></i></a></div>
+<div class="login-icon"><a href="wp-admin"><i class="fa fa-wordpress"></i></a></div>
