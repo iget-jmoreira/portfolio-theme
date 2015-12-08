@@ -1,4 +1,4 @@
-/*
+
  * Theme Name: portfolio-theme
  * Theme URI: http://themes.tobscore.com/romangie/
  * Version: 1.1.1
@@ -40,6 +40,12 @@ html body {
 	background-size: 100%;
 	background-position: center;
 }
+/*Movel - protrait*/
+@media screen and (max-width: 768px){
+	.card {
+		background-size:auto 100%;
+	}
+}
 
 .card-home {
 	height:100%;
@@ -72,9 +78,32 @@ html body {
 	padding-top:50px;
 	padding-bottom:50px;
 }
+@media screen and (max-width: 768px){
+	.card-contact {
+		top:30%;
+	}
+}
 
 .menu-icon {
 	display: none;
+}
+
+.login-icon {
+	z-index:2;
+	font-size:22px;
+	position:fixed;
+	padding:24px;
+	float:right;
+	margin-left:0px;
+}
+.login-icon a {
+	text-decoration: none;
+	color:#FFF;
+}
+@media screen and (max-width: 768px){
+	.login-icon {
+		right:0;
+	}
 }
 
 .profile-image {
@@ -88,6 +117,14 @@ html body {
 	background-size:auto 100%;
 	background-repeat:no-repeat;
 	box-shadow:0px 0px 5px #666;
+}
+@media screen and (max-width: 768px){
+	.profile-image {
+		margin-top:50%;
+		margin-left:calc(50% - 75px);
+		height:150px;
+		width: 150px;
+	}
 }
 
 .profile-name {
@@ -104,6 +141,13 @@ html body {
 	background-color:#009;
 	float:left;
 	border:1px solid #FFF;
+}
+@media screen and (max-width: 768px){
+	.skill {
+		width: 14px;
+		height: 14px;
+		margin-bottom:5px;
+	}
 }
 
 .icon {
@@ -127,8 +171,24 @@ html body {
 	padding:10px;
 	float: left;
 }
+@media screen and (max-width: 768px){
+	.icon {
+		margin-left: calc(50% - 20px);
+	}
+	#phone .icon {
+		margin-left:calc(50% - 20px);
+	}
+	#email .icon {
+		margin-left:calc(50% - 20px);
+	}
+	.contact {
+		width:100%;
+		text-align: center;
+		padding-bottom: 15px;
+	}
+}
 
-/*@media screen and (min-width: 768px){
+@media screen and (min-width: 768px){
 	.menu-icon {
 		display: none;
 	}
@@ -143,10 +203,10 @@ html body {
 		text-shadow:0px 0px 1px #fff;
 		text-decoration: none;
 	}	
-}*/
+}
 
 /*mobile*/
-/*@media screen and (max-width: 768px){
+@media screen and (max-width: 768px){
 	.menu-icon {
 		z-index:3;
 		display: block;
@@ -159,7 +219,7 @@ html body {
 	.menu-items {
 		display:none;
 		top: 70px; left: 0;
-		background-color:#00F;
+		background-color:#00b0ff;
 		position: absolute; width:100%;
 	}
 	.menu-items ul {
@@ -177,7 +237,7 @@ html body {
 		text-shadow:0px 0px 1px #fff;
 		text-decoration: none;
 	}	
-}*/
+}
 
 /*.card {
 	margin-top: 40px;
@@ -230,4 +290,4 @@ html body {
 
 .contact-content {
 	padding:9px;
-}*/
+}
