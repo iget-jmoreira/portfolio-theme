@@ -7,12 +7,15 @@
 /* Enqueue stylesheets and scripts */
 
 function portfolio_scripts () {
+    // enfileira arquivos CSS
     wp_enqueue_style('fontawesome', get_template_directory_uri() . '/script/font-awesome/css/font-awesome.min.css', array(), '1.0', false);
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/script/bootstrap/css/bootstrap.min.css', array(), '3.3.2', false);
     wp_enqueue_style('style', get_stylesheet_uri());
+
+    // enfileira arquivos JS
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', get_template_directory_uri() . '/script/jquery/jquery-2.1.4.min.js', array(), '2.1.4', true);
-    wp_enqueue_script('mystyle', get_template_directory_uri() . '/script/my.js', array(), '1.0', true);
+    wp_enqueue_script('mystyle', get_template_directory_uri() . '/script/style/myJS.js', array(), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'portfolio_scripts');
@@ -71,5 +74,16 @@ register_nav_menus(array(
 /* Allow use of custom single.php based on category */
 
 add_filter('single_template', create_function('$t', 'foreach( (array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-{$cat->term_id}.php") ) return TEMPLATEPATH . "/single-{$cat->term_id}.php"; } return $t;' ));
+
+function teste ($num){
+    for($n = 0; $n < 5; $n++){
+        if($num > 0){
+            echo "<div class='skill-power-on'></div>";
+            $num--;
+        } else {
+            echo "<div class='skill-power-off'></div>";
+        }
+    }
+}
 
 ?>

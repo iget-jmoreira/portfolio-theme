@@ -15,10 +15,15 @@
 	);
 ?>
 
-
 <div class="navigation">
-<?php wp_nav_menu($args); ?>
+	<div class="col-md-1 icon">
+		<a href="wp-admin"><i class="fa fa-wordpress"></i></a>
+	</div>
+	<div class="col-md-11 menu">
+		<?php wp_nav_menu($args); ?>
+	</div>
 </div>
 
-<div class="menu-icon" id="show_menu"><i class="fa fa-navicon"></i></div>
-<div class="login-icon"><a href="wp-admin"><i class="fa fa-wordpress"></i></a></div>
+<!-- <div class="menu-icon" id="show_menu"><i class="fa fa-navicon"></i></div> -->
+
+<div class="content">
