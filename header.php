@@ -17,7 +17,7 @@
 
 <div class="navigation">
 	<div class="col-md-1 icon">
-		<a href="wp-admin"><i class="fa fa-wordpress"></i></a>
+		<a href="/wordpress/wp-admin"><i class="fa fa-wordpress"></i></a>
 	</div>
 	<div class="col-md-11 menu">
 		<?php wp_nav_menu($args); ?>

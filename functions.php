@@ -10,6 +10,7 @@ function portfolio_scripts () {
     // enfileira arquivos CSS
     wp_enqueue_style('fontawesome', get_template_directory_uri() . '/script/font-awesome/css/font-awesome.min.css', array(), '1.0', false);
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/script/bootstrap/css/bootstrap.min.css', array(), '3.3.2', false);
+    wp_enqueue_style('teste', get_template_directory_uri() . '/script/style/materialColors.css', array(), '3.3.2', false);
     wp_enqueue_style('style', get_stylesheet_uri());
 
     // enfileira arquivos JS

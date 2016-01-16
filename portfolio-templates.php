@@ -6,7 +6,7 @@ Template Name: templates
 
 
 <?php get_header(); ?>
-<h1 class="page-title">Templates</h1>
+<h1 class="page-title blue-900">Templates</h1>
 
 <?php if(have_rows('templates')): ?>
 	<?php while(have_rows('templates')): the_row(); ?>
