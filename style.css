@@ -10,8 +10,7 @@ The Update also brings multi language support, which already includes German. Yo
  * */
 
 body {
-	background-color: #FFF;
-	font-family: Helvetica;
+	background-color:#FFF;
 }
 
 .navigation {
@@ -23,10 +22,10 @@ body {
 	height:60px;
 	text-align:right;
 	margin:0;
+	font-family: "Helvetica", sans-serif;
 }
 
 .navigation .icon {
-	/*border: 1px solid #000;*/
 	font-size:30px;
 	padding-top:15px;
 	text-align: center;
@@ -51,6 +50,7 @@ body {
 .content {
 	margin-top:60px;
 	padding:8px;
+	font-family: "Helvetica", sans-serif;
 }
 
 .bio h3{
@@ -80,7 +80,6 @@ body {
 .user h3 {
 	margin-top:60px;
 }
-
 h1 {
 	font-size:65px;
 }
@@ -104,14 +103,38 @@ h5 {
 }
 
 .templates {
-	height:250px;
-	width:250px;
-	margin-left: calc(50% - 125px);
+	height:200px;
+	width:200px;
+	margin-left: calc(50% - 100px);
 	background-size: auto 100%;
 	background-position:center;
 	background-repeat: no-repeat;
+	cursor:pointer;
 }
 
+.template-hidden {
+	position:fixed;
+	z-index:4;
+	display:none;
+	top:20px; left:0;
+}
+
+.images-list {
+	bottom:0;
+	left:0;
+	position:fixed;
+	width:100%;
+	height:100px;
+	overflow-x: auto;
+    white-space: nowrap;
+}
+
+.images-list img {
+	max-width:5%;
+	max-height:100px;
+	float:center;
+	cursor: pointer;
+}
 .skill-power-on {
 	width:30px; height:30px;
 	border-radius:15px;
@@ -138,9 +161,43 @@ h5 {
 .content-proposta {
 	background-color:#DDD;
 	padding:8px;
+	width:80%;
+	margin-left: 10%;
 }
 
 .content-proposta h3 {
 	font-size:34px;
 	margin-bottom: 20px;
+}
+
+.contact-icon {
+	float:left;
+	background-color: #64b5f6;
+	width:50px;
+	height:50px;
+	text-align: center;
+	padding-top:13px;
+	font-size:24px;
+	border-radius:50px;
+	margin-bottom:20px;
+}
+
+.contact-title {
+	float:left;
+	padding-top:7px;
+	padding-left:20px;
+	font-size:20px;
+}
+
+.black-back {
+	z-index:3;
+	position:fixed;
+	width:100%; height:100%;
+	top:0; left:0;
+	background-color:#000;
+	opacity:.8;
+}
+
+.bigImg {
+	max-height: 500px;
 }

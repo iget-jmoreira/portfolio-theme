@@ -9,7 +9,7 @@ Template Name: contato
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-5">
+		<div class="col-md-6">
 			<div class="content-proposta">
 				<h3 class="text-center blue-700">
 					Envie Uma Proposta
@@ -28,8 +28,41 @@ Template Name: contato
 				</div>
 			</div>
 		</div>
-		<div class="col-md-7">
-			oi
+		<div class="col-md-6">
+			<?php if(get_field('phone')): ?>
+				<div class="container-fluid">	
+					<div class="contact-icon text-white"><i class="fa fa-phone"></i></div>
+					<div class="contact-title"><?php the_field('phone'); ?></div>
+				</div>
+			<?php endif; ?>
+
+			<?php if(get_field('mail')): ?>
+				<div class="container-fluid">	
+					<div class="contact-icon text-white"><i class="fa fa-envelope-o"></i></div>
+					<div class="contact-title"><?php the_field('mail'); ?></div>
+				</div>
+			<?php endif; ?>
+
+			<?php if(get_field('facebook')): ?>
+				<div class="container-fluid">	
+					<div class="contact-icon text-white"><i class="fa fa-facebook"></i></div>
+					<div class="contact-title"><?php the_field('facebook'); ?></div>
+				</div>
+			<?php endif; ?>
+
+			<?php if(get_field('github')): ?>
+				<div class="container-fluid">	
+					<div class="contact-icon text-white"><i class="fa fa-github"></i></div>
+					<div class="contact-title"><?php the_field('github'); ?></div>
+				</div>
+			<?php endif; ?>
+
+			<?php if(get_field('twitter')): ?>
+				<div class="container-fluid">	
+					<div class="contact-icon text-white"><i class="fa fa-twitter"></i></div>
+					<div class="contact-title"><?php the_field('twitter'); ?></div>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>

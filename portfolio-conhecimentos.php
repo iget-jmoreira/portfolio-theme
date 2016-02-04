@@ -11,10 +11,7 @@ Template Name: conhecimentos
 	<?php while(have_rows('knowledges')):the_row(); ?>
 		<div class="col-md-3">
 			<div class="row">
-				<div class="knowledge-image" style="background-image:url(<?php the_sub_field('knowledge_image'); ?>)">&nbsp;</div>
-			</div>
-			<div class="row text-center">
-				<h5 class="text-color"><?php the_sub_field('knowledge_title'); ?></h5>
+				<div class="knowledge-image" title="<?php the_sub_field('knowledge_title'); ?>" style="background-image:url(<?php the_sub_field('knowledge_image'); ?>)">&nbsp;</div>
 			</div>
 		</div>
 	<?php endwhile; ?>
